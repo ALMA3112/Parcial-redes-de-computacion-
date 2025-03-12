@@ -28,7 +28,10 @@ La finalidad de este ejercicio es evidenciar el manejo de conexiones TCP y la im
 - Prueba de Conexión Simultánea: Se ejecutaron cuatro instancias del cliente de forma simultánea, verificando que el servidor acepta y responde a cada conexión sin interrupciones.
 - Verificación de Mensajes: Cada cliente envió un mensaje de saludo y el servidor respondió confirmando la recepción, mostrando en consola la identificación y el mensaje de cada cliente.
 - Control de Errores: Se validó que el servidr desconecta clientes que exceden el límite de longitud de mensajes o envían mensajes a una velocidad excesiva.
-
+## 5. Medicion del Programa (Estimada)
+-RAM base: El proceso de Python en sí mismo consume alrededor de 10-30 MB de RAM sin conexiones activas, dependiendo del sistema operativo y la versión de Python.
+-Por conexión: Cada conexión de cliente puede consumir entre 1-5 MB de RAM, dependiendo del tamaño de los mensajes y los buffers utilizados. Esto incluye el socket, los buffers de entrada/salida y el hilo asociado.
+-Total estimado: Con 10 conexiones activas, el consumo de RAM podría estar en el rango de 20-80 MB, dependiendo de la actividad de los clientes y el tamaño de los mensajes.
 ## 5. Evidencias de Ejecución
 - Iniciar Servidor:
 
